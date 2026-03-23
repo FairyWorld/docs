@@ -1,0 +1,21 @@
+---
+title: "获取用户信息 (HTTP)"
+api: "GET https://jsonplaceholder.typicode.com/users/{id}"
+description: "通过用户 ID 获取一个随机账户的公开信息。点击右侧 Send 进行在线调试。"
+---
+
+### 路径参数 (Path Parameters)
+
+<ParamField path="id" type="number" required default="1">
+  用户的唯一 ID。随意输入 1 到 10 之间的数字来调试体验。
+</ParamField>
+
+### 返回结果预测
+
+<ResponseField name="name" type="string">
+  系统所查找到的用户的真实全名。
+</ResponseField>
+
+<ResponseField name="email" type="string">
+  系统查找到的邮箱，通常带有 @biz 或是 @tv 后缀。
+</ResponseField>

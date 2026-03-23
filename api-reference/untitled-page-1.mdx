@@ -1,0 +1,21 @@
+---
+title: "订阅市场实时行情 (WebSocket)"
+api: "WSS wss://echo.websocket.org"
+description: "连接到官方 Echo 测试服务器。你在右侧发送的任何指令，服务器都会实时原样退回（Echo），以此体验 WebSocket 长连接交互流。"
+---
+
+### 发送给服务器的消息结构
+
+请在右侧修改消息内容，然后点击 **Connect** 建立链接，紧接着点击 **Send**。
+
+<ParamField body="action" type="string" default="subscribe" required>
+  动作指令，比如 `subscribe` (订阅) 或 `unsubscribe` (取消)。
+</ParamField>
+
+<ParamField body="market_id" type="string" default="0x1234abcd" required>
+  市场的唯一标识符。
+</ParamField>
+
+### 事件监听建议
+
+成功连接后，右侧的日志流面板（Log）会持续滚动打印由于上述动作所触发的事件回调。
